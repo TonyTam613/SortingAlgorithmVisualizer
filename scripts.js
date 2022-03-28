@@ -3,23 +3,17 @@ var hexNums = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", 
 
 function moveRec(pos, recNum) {
     var rec = document.getElementById("#rec" + recNum.toString());
-    var button = document.getElementById("#butt");
     var left = parseInt(rec.style.left);
-    //button.innerHTML = rec.style.left;`
-    //rec.innerHTML = left;
     rec.style.left = pos.toString() + "px";
 }
 
 function getHeight(rec){
-    //rec.innerHTML = rec.style.height;
     return parseInt(document.getElementById(rec).style.height);
 }
 
 function moveRecL() {
     var rec = document.getElementById("#rec");
-    var button = document.getElementById("#butt")
     var left = parseInt(rec.style.left);
-    button.innerHTML = rec.style.left;
     left = left - 100;
     rec.innerHTML = left;
     rec.style.left = left.toString() + "px";
@@ -27,7 +21,6 @@ function moveRecL() {
 
 function setRec(pos, rec, length) {
     var rec = document.getElementById(rec);
-    var button = document.getElementById("#butt");
    
     rec.style.top = (400 - length).toString() + "px";
     rec.style.height = length.toString() + "px";
@@ -35,9 +28,7 @@ function setRec(pos, rec, length) {
 }
 
 function setPos(pos, rec){
-    var rec = document.getElementById(rec);
-    var button = document.getElementById("#butt");
-   
+    var rec = document.getElementById(rec);   
     rec.style.left = pos.toString() + "px";
 }
 function initialize(){
@@ -50,7 +41,6 @@ function initialize(){
 
 
 function sort(rec1, rec2, count){
-    console.log("wowowow" + count.toString());
     var swapped = false;
     var recc = rec1;
     var recv = rec2;
@@ -74,7 +64,7 @@ function sort(rec1, rec2, count){
             recc = 0;
             recv = 1;
         }
-        setTimeout(function(){sort(recc, recv, counts); }, 500);
+        setTimeout(function(){sort(recc, recv, counts); }, 500); //setTimeout is used to slow it down so you can actually see what is happening
     }
 }
 
