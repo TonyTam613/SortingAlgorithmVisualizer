@@ -1,0 +1,8 @@
+.rectangles {
+    height: 300px;
+    width: 100px;
+    left: 10px;
+    background-color: red;
+    transition: left 0.5s;
+    position: fixed;
+}
