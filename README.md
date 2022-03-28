@@ -1,0 +1,2 @@
+# SortingAlgorithmVisualizer
+This is a Sorting Algorithm Visualizer. The end goal of this is to make a fun and visually appealing website that will show how sorting algorithms work. Currently it only has Bubble sort and it isn't very visually appealing right now but the end goal is to have multiple algorithms to choose from like merge sort and quick sort and have the interface be more user friendly and nicer to look at.
