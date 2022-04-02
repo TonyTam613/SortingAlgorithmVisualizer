@@ -3,7 +3,7 @@
     top: 300px;
     width: 100px;
     left: 450px;
-    background-color: blue;
+    background-color: rgb(184, 157, 3);
     transition: left 0.5s;
     position: fixed;
 }

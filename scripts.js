@@ -61,7 +61,7 @@ function sort(rec1, rec2, count){
             } else if (randomColourPressed) {
                 resetColour(divs[i], colours[i]);
             } else {
-                resetColour(divs[i], "blue");
+                resetColour(divs[i], "rgb(184, 157, 3)");
             }
         }
     }
@@ -86,6 +86,16 @@ function sort(rec1, rec2, count){
             recv = 1;
         }
         setTimeout(function(){sort(recc, recv, counts); }, 500); //setTimeout is used to slow it down so you can actually see what is happening
+    } else {
+        for(var i = 0; i < 10; i++){
+            if(setColourPressed){
+                resetColour(divs[i], document.getElementById("#colorInput").value);
+            } else if (randomColourPressed) {
+                resetColour(divs[i], colours[i]);
+            } else {
+                resetColour(divs[i], "rgb(184, 157, 3)");
+            }
+        }
     }
 }
 
@@ -94,6 +104,11 @@ function move(rec1, rec2){
     var holder = divs[rec1];
     divs[rec1] = divs[rec2];
     divs[rec2] = holder;
+    if(randomColourPressed){
+        holder = colours[rec1];
+        colours[rec1] = colours[rec2];
+        colours[rec2] = holder;
+    }
 }
 
 function update() {
